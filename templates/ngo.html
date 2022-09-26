@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='ngo.css') }}">
+        <script src="{{ url_for('static',filename='ngo.js') }}"></script>
+    </head>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+      </script>
+     
+<div class="container">
+	<div class="header">
+		<h2>Create Account</h2>
+	</div>
+	<form id="form" class="form" action="/sign_upngo" method="POST">
+        <div class="form-control">
+			<label for="username">Name</label>
+			<input type="text" placeholder=" Enter your name" id="name" name="name" required/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		
+        <div class="form-control">
+			<label for="username">Phone Number</label>
+			<input type="tel" placeholder="Enter phone-no" id="phone" name="phno" required/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+        <div class="form-control">
+			<label for="username">Adress</label>
+			<input type="text" placeholder=" Enter your adress" id="adress" name="add" required/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Email</label>
+			<input type="email" placeholder="Enter your email" id="email" name="email" required/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password</label>
+			<input type="password" placeholder="Enter Password" id="password" name="password" required/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+
+		<button> <a href="/" style="color:#f5f5f5 ;text-decoration:none;">Submit</a></button>
+
+	</form>
+</div>
+
+
+<!-- SOCIAL PANEL HTML -->
+<div class="social-panel-container">
+	<div class="social-panel">
+		<p>Created with <i class="fa fa-heart"></i> by
+			<a target="_blank" href="https://florin-pop.com">Florin Pop</a></p>
+		<button class="close-btn"><i class="fas fa-times"></i></button>
+		<h4>Get in touch on</h4>
+		<ul>
+			<li>
+				<a href="https://www.patreon.com/florinpop17" target="_blank">
+					<i class="fab fa-discord"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/florinpop1705" target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li>    
+				<a href="https://linkedin.com/in/florinpop17" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://facebook.com/florinpop17" target="_blank">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://instagram.com/florinpop17" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<a href="/">
+<button class="floating-btn">
+	Go Home
+</button>
+</a>

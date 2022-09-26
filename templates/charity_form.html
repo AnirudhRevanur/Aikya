@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARITY</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='charity_form_css.css') }}">
+</head>
+<body>
+    <h1 id="1">Select the NGO you want to donate to</h1>
+    <p style="color: red;">*please sign in before choosing to donate</p>
+    <div style="text-align:right;" ><a href="/" style="text-align:right">Home Page</a></div>
+    <hr>
+    {% for i in ngos %}
+        <div class="ngo">
+            <p>{{ i.name }}</p>
+            <p>{{ i.add }}</p>
+            <p>{{ i.email }}</p>
+            <a href="{{ i.loc }}"></a>
+            <form class="ngo1" method="POST" action="/ngo_list">
+                <input size="100"  type="text" name="details" placeholder="Enter your detailed donation description" required>
+                <input type="submit" name="donate" value="donate">
+             </form>
+        </div>
+        <hr>
+    {% endfor %}
+    <!-- <div class="ngo">
+        <p>Name:</p>
+        <p>Address</p>
+        <p>email</p>
+        <p>location:</p>
+        <form class="ngo1">
+            <input type="text" name="details" placeholder="Enter your detailed donation description">
+            <input type="submit" name="donate" value="donate">
+        </form>
+    </div> -->
+</body>
+</html>
